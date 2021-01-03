@@ -83,6 +83,7 @@ vscode的常用快捷键：
 4. 单行移动代码：alt+上下方向键
 5. 单行复制代码：shift+alt+上下方向键
 6. 代码注释：ctrl+/
+7. 单独执行选中代码：选中代码后shift+回车
 
 jupyter notebook:使用pip install -i jupyter 后执行jupyter notebook就可以启动网页版的编辑器了
 
@@ -276,6 +277,8 @@ from pathlib import Path
 p=Path()
 ##获取当前路径
 p.resolve()	
+##获取当前脚本的绝对路径
+p=Path(__file__)
 ##提取路径信息
 path='C:/testfile/test.txt.py'
 p=Path(path)
