@@ -1,0 +1,8 @@
+##inner join 
+1|table1_table2|1|table1_table2
+##left join
+1|table1_table2|1|table1_table2
+2|table1|||
+##rigth join
+1|table1_table2|1|table1_table2
+||3|table2

@@ -1,0 +1,19 @@
+##修改mysql 的默认字符集，在[mysql]和client下增加
+default_character_set = utf8mb4
+##在[mysqld]下增加
+init_connect='SET NAMES utf8mb4'
+character_set_server=uft8mb4
+collation_server=uft8mb4_unicode_ci
+character_set_client_handshake=FALSE
+
+##使用命令查看字符集
+show variables like '%character%';
+
+##创建数据库
+create database testdb default character set utf8mb4 collate utf8mb4_general_ci;
+
+##创建远程用户
+create user 'python_test'@'%' identified by 'JustForTest@06';
+
+##给远程用户赋权限
+grant all privileges on testdb.* to 'python_test'@'%';
